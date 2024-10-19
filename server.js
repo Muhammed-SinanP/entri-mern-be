@@ -1,4 +1,4 @@
-// server.js
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -6,9 +6,15 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const authRoutes = require('./routes/authRoutes');
+const corsOptions = {
+  origin: 'https://e44sinan-mern-assignment.netlify.app/',  
+  optionsSuccessStatus: 200,
+};
+
+
 
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
