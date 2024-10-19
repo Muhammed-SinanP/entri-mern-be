@@ -7,7 +7,7 @@ dotenv.config();
 
 const authRoutes = require('./routes/authRoutes');
 const corsOptions = {
-  origin: 'https://e44sinan-mern-assignment.netlify.app/',  
+  origin: 'https://e44sinan-mern-assignment.netlify.app',  
   optionsSuccessStatus: 200,
 };
 
