@@ -6,8 +6,9 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const authRoutes = require('./routes/authRoutes');
+
 const corsOptions = {
-  origin: ['http://localhost:5173','http://localhost:5000','https://e44sinan-mern-assignment.netlify.app'],  
+  origin: ['http://localhost:5173','https://e44sinan-mern-assignment.netlify.app'],  
   optionsSuccessStatus: 200,
 };
 
@@ -19,9 +20,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 
-app.get('/', (req, res) => {
-  res.send('Welcome to the API!'); // Response for the root URL
-});
+
 
 
   mongoose.connect(process.env.MONGO_URI)
